@@ -11,69 +11,89 @@ build_property.EnableTrimAnalyzer = true
 build_property.IncludeAllContentForSelfExtract = 
 build_property.RootNamespace = BlazorCRUD.Client
 build_property.RootNamespace = BlazorCRUD.Client
-build_property.ProjectDir = C:\Users\dhood\OneDrive - Federal Bureau of Investigation\Documents\Code\BlazorCRUD\Client\
+build_property.ProjectDir = c:\Users\dhood\OneDrive - Federal Bureau of Investigation\Documents\Code\BlazorCRUD\Client\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\dhood\OneDrive - Federal Bureau of Investigation\Documents\Code\BlazorCRUD\Client
+build_property.MSBuildProjectDirectory = c:\Users\dhood\OneDrive - Federal Bureau of Investigation\Documents\Code\BlazorCRUD\Client
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/dhood/OneDrive - Federal Bureau of Investigation/Documents/Code/BlazorCRUD/Client/App.razor]
+[c:/Users/dhood/OneDrive - Federal Bureau of Investigation/Documents/Code/BlazorCRUD/Client/App.razor]
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dhood/OneDrive - Federal Bureau of Investigation/Documents/Code/BlazorCRUD/Client/Pages/AddProduct.razor]
+[c:/Users/dhood/OneDrive - Federal Bureau of Investigation/Documents/Code/BlazorCRUD/Client/Pages/AddProduct.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRkUHJvZHVjdC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dhood/OneDrive - Federal Bureau of Investigation/Documents/Code/BlazorCRUD/Client/Pages/AddRandomUser.razor]
+[c:/Users/dhood/OneDrive - Federal Bureau of Investigation/Documents/Code/BlazorCRUD/Client/Pages/AddRandomUser.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRkUmFuZG9tVXNlci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dhood/OneDrive - Federal Bureau of Investigation/Documents/Code/BlazorCRUD/Client/Pages/AddUser.razor]
+[c:/Users/dhood/OneDrive - Federal Bureau of Investigation/Documents/Code/BlazorCRUD/Client/Pages/AddUser.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRkVXNlci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dhood/OneDrive - Federal Bureau of Investigation/Documents/Code/BlazorCRUD/Client/Pages/Counter.razor]
+[c:/Users/dhood/OneDrive - Federal Bureau of Investigation/Documents/Code/BlazorCRUD/Client/Pages/Counter.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRlci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dhood/OneDrive - Federal Bureau of Investigation/Documents/Code/BlazorCRUD/Client/Pages/DeleteProduct.razor]
+[c:/Users/dhood/OneDrive - Federal Bureau of Investigation/Documents/Code/BlazorCRUD/Client/Pages/Create.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3JlYXRlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/dhood/OneDrive - Federal Bureau of Investigation/Documents/Code/BlazorCRUD/Client/Pages/DeleteProduct.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGVsZXRlUHJvZHVjdC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dhood/OneDrive - Federal Bureau of Investigation/Documents/Code/BlazorCRUD/Client/Pages/DeleteUser.razor]
+[c:/Users/dhood/OneDrive - Federal Bureau of Investigation/Documents/Code/BlazorCRUD/Client/Pages/DeleteUser.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGVsZXRlVXNlci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dhood/OneDrive - Federal Bureau of Investigation/Documents/Code/BlazorCRUD/Client/Pages/FetchData.razor]
+[c:/Users/dhood/OneDrive - Federal Bureau of Investigation/Documents/Code/BlazorCRUD/Client/Pages/Edit.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRWRpdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/dhood/OneDrive - Federal Bureau of Investigation/Documents/Code/BlazorCRUD/Client/Pages/FetchData.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmV0Y2hEYXRhLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dhood/OneDrive - Federal Bureau of Investigation/Documents/Code/BlazorCRUD/Client/Pages/Index.razor]
+[c:/Users/dhood/OneDrive - Federal Bureau of Investigation/Documents/Code/BlazorCRUD/Client/Pages/FetchDeveloper.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmV0Y2hEZXZlbG9wZXIucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/dhood/OneDrive - Federal Bureau of Investigation/Documents/Code/BlazorCRUD/Client/Pages/Form.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRm9ybS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/dhood/OneDrive - Federal Bureau of Investigation/Documents/Code/BlazorCRUD/Client/Pages/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dhood/OneDrive - Federal Bureau of Investigation/Documents/Code/BlazorCRUD/Client/Pages/UserDetails.razor]
+[c:/Users/dhood/OneDrive - Federal Bureau of Investigation/Documents/Code/BlazorCRUD/Client/Pages/MovieDetails.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTW92aWVEZXRhaWxzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/dhood/OneDrive - Federal Bureau of Investigation/Documents/Code/BlazorCRUD/Client/Pages/UserDetails.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlckRldGFpbHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dhood/OneDrive - Federal Bureau of Investigation/Documents/Code/BlazorCRUD/Client/Pages/ViewProduct.razor]
+[c:/Users/dhood/OneDrive - Federal Bureau of Investigation/Documents/Code/BlazorCRUD/Client/Pages/ViewProduct.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlld1Byb2R1Y3QucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dhood/OneDrive - Federal Bureau of Investigation/Documents/Code/BlazorCRUD/Client/Shared/SurveyPrompt.razor]
+[c:/Users/dhood/OneDrive - Federal Bureau of Investigation/Documents/Code/BlazorCRUD/Client/Shared/SurveyPrompt.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFN1cnZleVByb21wdC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dhood/OneDrive - Federal Bureau of Investigation/Documents/Code/BlazorCRUD/Client/_Imports.razor]
+[c:/Users/dhood/OneDrive - Federal Bureau of Investigation/Documents/Code/BlazorCRUD/Client/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dhood/OneDrive - Federal Bureau of Investigation/Documents/Code/BlazorCRUD/Client/Shared/MainLayout.razor]
+[c:/Users/dhood/OneDrive - Federal Bureau of Investigation/Documents/Code/BlazorCRUD/Client/Shared/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-wu7p0wsi5n
 
-[C:/Users/dhood/OneDrive - Federal Bureau of Investigation/Documents/Code/BlazorCRUD/Client/Shared/NavMenu.razor]
+[c:/Users/dhood/OneDrive - Federal Bureau of Investigation/Documents/Code/BlazorCRUD/Client/Shared/NavMenu.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-4l6a2mzg14
