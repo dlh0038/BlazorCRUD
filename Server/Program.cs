@@ -13,6 +13,8 @@ builder.Services.AddDbContext<DatabaseContext>
 builder.Services.AddTransient<IUser, UserManager>();
 
 builder.Services.AddDbContext<ProductDbContext> (opts => opts.UseSqlite("Data Source = Product.db"));
+//attempting to share database Product.db with both Movie and Products
+builder.Services.AddDbContext<MovieContext> (opts => opts.UseSqlite("Data Source = Product.db"));
 // builder.Services.AddScoped<ProductServices>();
 
 builder.Services.AddControllersWithViews();
