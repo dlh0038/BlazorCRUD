@@ -12,7 +12,7 @@ builder.Services.AddDbContext<DatabaseContext>
     options.UseSqlite("Data Source = User.db"));
 builder.Services.AddTransient<IUser, UserManager>();
 
-// builder.Services.AddDbContext<ProductDbContext> (opts => opts.UseSqlite("Data Source = Product.db"));
+builder.Services.AddDbContext<ProductDbContext> (opts => opts.UseSqlite("Data Source = Product.db"));
 // builder.Services.AddScoped<ProductServices>();
 
 builder.Services.AddControllersWithViews();

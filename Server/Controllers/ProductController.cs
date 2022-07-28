@@ -2,6 +2,7 @@ using BlazorCRUD.Server.Models;
 using BlazorCRUD.Shared.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace BlazorCRUD.Server.Controllers
 {
@@ -15,6 +16,30 @@ namespace BlazorCRUD.Server.Controllers
             _userContext =userContext;
         }
 
+    [HttpGet]
+    public async Task<IActionResult> Get()
+    {
+        var products = await _userContext.Products.ToListAsync();
+        return Ok(products);
+    }
+
+    [HttpPost]
+    public async Task<IActionResult> Post(Product product)
+    {
+        _userContext.Add(product);
+        await _userContext.SaveChangesAsync();
+        return Ok(product.Name); 
+    }
+    [HttpDelete("{id}")]
+    public async Task<IActionResult> Delete(int id)
+    {
+        var product = new Product { Id = id };
+        _userContext.Remove(product);
+        await _userContext.SaveChangesAsync();
+        return NoContent();
+    }
+
+/* old probably incorrect controllers
         // GET api/user
         [HttpGet("")]
         public ActionResult<List<Product>> Getstrings()
@@ -59,6 +84,6 @@ namespace BlazorCRUD.Server.Controllers
             Product oldProduct = _userContext.Products.FirstOrDefault(product => product.Id == id);
             _userContext.Products.Remove(oldProduct);
             _userContext.SaveChanges();
-        }
+        } */
     }
 }

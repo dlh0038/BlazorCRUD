@@ -1,0 +1,68 @@
+@page "/addproduct"
+@using BlazorCRUD.Shared.Models
+@inject HttpClient service
+@inject NavigationManager NavigationManager
+@inject IJSRuntime js
+
+<h3>Create</h3>
+<hr />
+<EditForm Model="@product" OnValidSubmit="SaveProduct">
+    <DataAnnotationsValidator />
+    <div class="mb-3">
+        <label for="Name" class="form-label">Name</label>
+        <div class="col-md-4">
+            <InputText class="form-control" @bind-Value="product.Name" />
+        </div>
+        <ValidationMessage For="@(() => product.Name)" />
+    </div>
+    <div class="mb-3">
+        <label for="Price" class="form-label">Price</label>
+        <div class="col-md-4">
+            <InputNumber class="form-control" @bind-Value="product.Price" />
+        </div>
+        <!-- <ValidationMessage For="@(() => user.Address)" /> -->
+    </div>
+    <div class="mb-3">
+        <label for="Description" class="form-label">Description</label>
+        <div class="col-md-4">
+            <InputText class="form-control" @bind-Value="product.Description" />
+        </div>
+        <!-- <ValidationMessage For="@(() => user.Cellnumber)" /> -->
+    </div>
+    <div class="mb-3">
+        <label for="Quantity" class="form-label">Quantity</label>
+        <div class="col-md-4">
+            <InputNumber class="form-control" @bind-Value="product.Quantity" />
+        </div>
+        <!-- <ValidationMessage For="@(() => user.Emailid)" /> -->
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Save</button>
+        <button class="btn btn-danger" @onclick="Cancel">Cancel</button>
+    </div>
+</EditForm>
+
+
+@code{
+    Product product = new Product();
+    async Task CreateProduct()
+    {
+        await service.PostAsJsonAsync("api/product", product);
+    }
+    protected async Task SaveProduct()
+    {
+        if (product.Id != 0)
+        {
+            await service.PutAsJsonAsync("api/product", product);
+        }
+        else
+        {
+            await service.PostAsJsonAsync("api/product", product);
+        }
+        Cancel();
+    }
+    public void Cancel()
+    {
+        NavigationManager.NavigateTo("/product");
+    }
+}

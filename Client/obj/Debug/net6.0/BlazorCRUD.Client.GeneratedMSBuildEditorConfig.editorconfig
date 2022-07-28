@@ -22,12 +22,24 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/dhood/OneDrive - Federal Bureau of Investigation/Documents/Code/BlazorCRUD/Client/Pages/AddProduct.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRkUHJvZHVjdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/dhood/OneDrive - Federal Bureau of Investigation/Documents/Code/BlazorCRUD/Client/Pages/AddRandomUser.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRkUmFuZG9tVXNlci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/dhood/OneDrive - Federal Bureau of Investigation/Documents/Code/BlazorCRUD/Client/Pages/AddUser.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRkVXNlci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/dhood/OneDrive - Federal Bureau of Investigation/Documents/Code/BlazorCRUD/Client/Pages/Counter.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRlci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/dhood/OneDrive - Federal Bureau of Investigation/Documents/Code/BlazorCRUD/Client/Pages/DeleteProduct.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGVsZXRlUHJvZHVjdC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/dhood/OneDrive - Federal Bureau of Investigation/Documents/Code/BlazorCRUD/Client/Pages/DeleteUser.razor]
@@ -44,6 +56,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/dhood/OneDrive - Federal Bureau of Investigation/Documents/Code/BlazorCRUD/Client/Pages/UserDetails.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlckRldGFpbHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/dhood/OneDrive - Federal Bureau of Investigation/Documents/Code/BlazorCRUD/Client/Pages/ViewProduct.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlld1Byb2R1Y3QucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/dhood/OneDrive - Federal Bureau of Investigation/Documents/Code/BlazorCRUD/Client/Shared/SurveyPrompt.razor]

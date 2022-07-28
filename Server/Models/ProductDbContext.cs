@@ -13,7 +13,7 @@ public class ProductDbContext : DbContext
     #endregion
 
     #region Public properties
-    public DbSet<Product> Product { get; set; }
+    public DbSet<Product> Products { get; set; }
     #endregion
 
     #region Overidden methods
