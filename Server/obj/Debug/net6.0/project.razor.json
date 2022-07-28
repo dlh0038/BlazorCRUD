@@ -4612,39 +4612,6 @@
         }
       },
       {
-        "HashCode": 242842720,
-        "Kind": "Components.Component",
-        "Name": "BlazorCRUD.Client.Pages.Counter",
-        "AssemblyName": "BlazorCRUD.Client",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Counter"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorCRUD.Client.Pages.Counter"
-        }
-      },
-      {
-        "HashCode": 139519805,
-        "Kind": "Components.Component",
-        "Name": "BlazorCRUD.Client.Pages.Counter",
-        "AssemblyName": "BlazorCRUD.Client",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "BlazorCRUD.Client.Pages.Counter"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorCRUD.Client.Pages.Counter",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
         "HashCode": 1756412409,
         "Kind": "Components.Component",
         "Name": "BlazorCRUD.Client.Pages.FetchData",
@@ -4711,59 +4678,6 @@
         }
       },
       {
-        "HashCode": -534626996,
-        "Kind": "Components.Component",
-        "Name": "BlazorCRUD.Client.Pages.AddRandomUser",
-        "AssemblyName": "BlazorCRUD.Client",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "AddRandomUser"
-          }
-        ],
-        "BoundAttributes": [
-          {
-            "Kind": "Components.Component",
-            "Name": "userId",
-            "TypeName": "System.Int32",
-            "Metadata": {
-              "Common.PropertyName": "userId"
-            }
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorCRUD.Client.Pages.AddRandomUser"
-        }
-      },
-      {
-        "HashCode": -1256725554,
-        "Kind": "Components.Component",
-        "Name": "BlazorCRUD.Client.Pages.AddRandomUser",
-        "AssemblyName": "BlazorCRUD.Client",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "BlazorCRUD.Client.Pages.AddRandomUser"
-          }
-        ],
-        "BoundAttributes": [
-          {
-            "Kind": "Components.Component",
-            "Name": "userId",
-            "TypeName": "System.Int32",
-            "Metadata": {
-              "Common.PropertyName": "userId"
-            }
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorCRUD.Client.Pages.AddRandomUser",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
         "HashCode": -1776734699,
         "Kind": "Components.Component",
         "Name": "BlazorCRUD.Client.Pages.AddUser",
@@ -4813,39 +4727,6 @@
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
           "Common.TypeName": "BlazorCRUD.Client.Pages.AddUser",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "HashCode": -1668894647,
-        "Kind": "Components.Component",
-        "Name": "BlazorCRUD.Client.Pages.AddProduct",
-        "AssemblyName": "BlazorCRUD.Client",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "AddProduct"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorCRUD.Client.Pages.AddProduct"
-        }
-      },
-      {
-        "HashCode": 1454393206,
-        "Kind": "Components.Component",
-        "Name": "BlazorCRUD.Client.Pages.AddProduct",
-        "AssemblyName": "BlazorCRUD.Client",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "BlazorCRUD.Client.Pages.AddProduct"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorCRUD.Client.Pages.AddProduct",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -4982,35 +4863,360 @@
         }
       },
       {
-        "HashCode": 1464719551,
+        "HashCode": -409449908,
         "Kind": "Components.Component",
-        "Name": "BlazorCRUD.Client.App",
+        "Name": "BlazorCRUD.Client.Pages.FetchDeveloper",
         "AssemblyName": "BlazorCRUD.Client",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "App"
+            "TagName": "FetchDeveloper"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorCRUD.Client.App"
+          "Common.TypeName": "BlazorCRUD.Client.Pages.FetchDeveloper"
         }
       },
       {
-        "HashCode": 189201690,
+        "HashCode": -1822114918,
         "Kind": "Components.Component",
-        "Name": "BlazorCRUD.Client.App",
+        "Name": "BlazorCRUD.Client.Pages.FetchDeveloper",
         "AssemblyName": "BlazorCRUD.Client",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "BlazorCRUD.Client.App"
+            "TagName": "BlazorCRUD.Client.Pages.FetchDeveloper"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorCRUD.Client.App",
+          "Common.TypeName": "BlazorCRUD.Client.Pages.FetchDeveloper",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": -496330732,
+        "Kind": "Components.Component",
+        "Name": "BlazorCRUD.Client.Pages.Form",
+        "AssemblyName": "BlazorCRUD.Client",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Form"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "dev",
+            "TypeName": "BlazorCRUD.Shared.Models.Developer",
+            "Metadata": {
+              "Common.PropertyName": "dev"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "ButtonText",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "ButtonText"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "OnValidSubmit",
+            "TypeName": "Microsoft.AspNetCore.Components.EventCallback",
+            "Metadata": {
+              "Common.PropertyName": "OnValidSubmit",
+              "Components.EventCallback": "True"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "BlazorCRUD.Client.Pages.Form"
+        }
+      },
+      {
+        "HashCode": 2026213623,
+        "Kind": "Components.Component",
+        "Name": "BlazorCRUD.Client.Pages.Form",
+        "AssemblyName": "BlazorCRUD.Client",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "BlazorCRUD.Client.Pages.Form"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "dev",
+            "TypeName": "BlazorCRUD.Shared.Models.Developer",
+            "Metadata": {
+              "Common.PropertyName": "dev"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "ButtonText",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "ButtonText"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "OnValidSubmit",
+            "TypeName": "Microsoft.AspNetCore.Components.EventCallback",
+            "Metadata": {
+              "Common.PropertyName": "OnValidSubmit",
+              "Components.EventCallback": "True"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "BlazorCRUD.Client.Pages.Form",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": -501736292,
+        "Kind": "Components.Component",
+        "Name": "BlazorCRUD.Client.Pages.Edit",
+        "AssemblyName": "BlazorCRUD.Client",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Edit"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "developerId",
+            "TypeName": "System.Int32",
+            "Metadata": {
+              "Common.PropertyName": "developerId"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "BlazorCRUD.Client.Pages.Edit"
+        }
+      },
+      {
+        "HashCode": -1662320056,
+        "Kind": "Components.Component",
+        "Name": "BlazorCRUD.Client.Pages.Edit",
+        "AssemblyName": "BlazorCRUD.Client",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "BlazorCRUD.Client.Pages.Edit"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "developerId",
+            "TypeName": "System.Int32",
+            "Metadata": {
+              "Common.PropertyName": "developerId"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "BlazorCRUD.Client.Pages.Edit",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": -1668894647,
+        "Kind": "Components.Component",
+        "Name": "BlazorCRUD.Client.Pages.AddProduct",
+        "AssemblyName": "BlazorCRUD.Client",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "AddProduct"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "BlazorCRUD.Client.Pages.AddProduct"
+        }
+      },
+      {
+        "HashCode": 1454393206,
+        "Kind": "Components.Component",
+        "Name": "BlazorCRUD.Client.Pages.AddProduct",
+        "AssemblyName": "BlazorCRUD.Client",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "BlazorCRUD.Client.Pages.AddProduct"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "BlazorCRUD.Client.Pages.AddProduct",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": -534626996,
+        "Kind": "Components.Component",
+        "Name": "BlazorCRUD.Client.Pages.AddRandomUser",
+        "AssemblyName": "BlazorCRUD.Client",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "AddRandomUser"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "userId",
+            "TypeName": "System.Int32",
+            "Metadata": {
+              "Common.PropertyName": "userId"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "BlazorCRUD.Client.Pages.AddRandomUser"
+        }
+      },
+      {
+        "HashCode": -1256725554,
+        "Kind": "Components.Component",
+        "Name": "BlazorCRUD.Client.Pages.AddRandomUser",
+        "AssemblyName": "BlazorCRUD.Client",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "BlazorCRUD.Client.Pages.AddRandomUser"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "userId",
+            "TypeName": "System.Int32",
+            "Metadata": {
+              "Common.PropertyName": "userId"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "BlazorCRUD.Client.Pages.AddRandomUser",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": 1975966911,
+        "Kind": "Components.Component",
+        "Name": "BlazorCRUD.Client.Pages.Create",
+        "AssemblyName": "BlazorCRUD.Client",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Create"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "BlazorCRUD.Client.Pages.Create"
+        }
+      },
+      {
+        "HashCode": -1443996369,
+        "Kind": "Components.Component",
+        "Name": "BlazorCRUD.Client.Pages.Create",
+        "AssemblyName": "BlazorCRUD.Client",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "BlazorCRUD.Client.Pages.Create"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "BlazorCRUD.Client.Pages.Create",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": 242842720,
+        "Kind": "Components.Component",
+        "Name": "BlazorCRUD.Client.Pages.Counter",
+        "AssemblyName": "BlazorCRUD.Client",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Counter"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "BlazorCRUD.Client.Pages.Counter"
+        }
+      },
+      {
+        "HashCode": 139519805,
+        "Kind": "Components.Component",
+        "Name": "BlazorCRUD.Client.Pages.Counter",
+        "AssemblyName": "BlazorCRUD.Client",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "BlazorCRUD.Client.Pages.Counter"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "BlazorCRUD.Client.Pages.Counter",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": 1047090350,
+        "Kind": "Components.Component",
+        "Name": "BlazorCRUD.Client.Shared.NavMenu",
+        "AssemblyName": "BlazorCRUD.Client",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "NavMenu"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "BlazorCRUD.Client.Shared.NavMenu"
+        }
+      },
+      {
+        "HashCode": -1374999579,
+        "Kind": "Components.Component",
+        "Name": "BlazorCRUD.Client.Shared.NavMenu",
+        "AssemblyName": "BlazorCRUD.Client",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "BlazorCRUD.Client.Shared.NavMenu"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "BlazorCRUD.Client.Shared.NavMenu",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -5164,35 +5370,35 @@
         }
       },
       {
-        "HashCode": 1047090350,
+        "HashCode": 1464719551,
         "Kind": "Components.Component",
-        "Name": "BlazorCRUD.Client.Shared.NavMenu",
+        "Name": "BlazorCRUD.Client.App",
         "AssemblyName": "BlazorCRUD.Client",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "NavMenu"
+            "TagName": "App"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorCRUD.Client.Shared.NavMenu"
+          "Common.TypeName": "BlazorCRUD.Client.App"
         }
       },
       {
-        "HashCode": -1374999579,
+        "HashCode": 189201690,
         "Kind": "Components.Component",
-        "Name": "BlazorCRUD.Client.Shared.NavMenu",
+        "Name": "BlazorCRUD.Client.App",
         "AssemblyName": "BlazorCRUD.Client",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "BlazorCRUD.Client.Shared.NavMenu"
+            "TagName": "BlazorCRUD.Client.App"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorCRUD.Client.Shared.NavMenu",
+          "Common.TypeName": "BlazorCRUD.Client.App",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },

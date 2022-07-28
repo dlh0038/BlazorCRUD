@@ -13,6 +13,7 @@ C:\Users\dhood\OneDrive - Federal Bureau of Investigation\Documents\Code\BlazorC
 C:\Users\dhood\OneDrive - Federal Bureau of Investigation\Documents\Code\BlazorCRUD\Server\bin\Debug\net6.0\BlazorCRUD.Server.runtimeconfig.json
 C:\Users\dhood\OneDrive - Federal Bureau of Investigation\Documents\Code\BlazorCRUD\Server\bin\Debug\net6.0\BlazorCRUD.Server.dll
 C:\Users\dhood\OneDrive - Federal Bureau of Investigation\Documents\Code\BlazorCRUD\Server\bin\Debug\net6.0\BlazorCRUD.Server.pdb
+C:\Users\dhood\OneDrive - Federal Bureau of Investigation\Documents\Code\BlazorCRUD\Server\bin\Debug\net6.0\Humanizer.dll
 C:\Users\dhood\OneDrive - Federal Bureau of Investigation\Documents\Code\BlazorCRUD\Server\bin\Debug\net6.0\Microsoft.AspNetCore.Authorization.dll
 C:\Users\dhood\OneDrive - Federal Bureau of Investigation\Documents\Code\BlazorCRUD\Server\bin\Debug\net6.0\Microsoft.AspNetCore.Components.dll
 C:\Users\dhood\OneDrive - Federal Bureau of Investigation\Documents\Code\BlazorCRUD\Server\bin\Debug\net6.0\Microsoft.AspNetCore.Components.Forms.dll
@@ -23,6 +24,7 @@ C:\Users\dhood\OneDrive - Federal Bureau of Investigation\Documents\Code\BlazorC
 C:\Users\dhood\OneDrive - Federal Bureau of Investigation\Documents\Code\BlazorCRUD\Server\bin\Debug\net6.0\Microsoft.Data.Sqlite.dll
 C:\Users\dhood\OneDrive - Federal Bureau of Investigation\Documents\Code\BlazorCRUD\Server\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
 C:\Users\dhood\OneDrive - Federal Bureau of Investigation\Documents\Code\BlazorCRUD\Server\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\dhood\OneDrive - Federal Bureau of Investigation\Documents\Code\BlazorCRUD\Server\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
 C:\Users\dhood\OneDrive - Federal Bureau of Investigation\Documents\Code\BlazorCRUD\Server\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
 C:\Users\dhood\OneDrive - Federal Bureau of Investigation\Documents\Code\BlazorCRUD\Server\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Sqlite.dll
 C:\Users\dhood\OneDrive - Federal Bureau of Investigation\Documents\Code\BlazorCRUD\Server\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
@@ -30,9 +32,13 @@ C:\Users\dhood\OneDrive - Federal Bureau of Investigation\Documents\Code\BlazorC
 C:\Users\dhood\OneDrive - Federal Bureau of Investigation\Documents\Code\BlazorCRUD\Server\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
 C:\Users\dhood\OneDrive - Federal Bureau of Investigation\Documents\Code\BlazorCRUD\Server\bin\Debug\net6.0\Microsoft.JSInterop.dll
 C:\Users\dhood\OneDrive - Federal Bureau of Investigation\Documents\Code\BlazorCRUD\Server\bin\Debug\net6.0\Microsoft.JSInterop.WebAssembly.dll
+C:\Users\dhood\OneDrive - Federal Bureau of Investigation\Documents\Code\BlazorCRUD\Server\bin\Debug\net6.0\Microsoft.OpenApi.dll
 C:\Users\dhood\OneDrive - Federal Bureau of Investigation\Documents\Code\BlazorCRUD\Server\bin\Debug\net6.0\SQLitePCLRaw.batteries_v2.dll
 C:\Users\dhood\OneDrive - Federal Bureau of Investigation\Documents\Code\BlazorCRUD\Server\bin\Debug\net6.0\SQLitePCLRaw.core.dll
 C:\Users\dhood\OneDrive - Federal Bureau of Investigation\Documents\Code\BlazorCRUD\Server\bin\Debug\net6.0\SQLitePCLRaw.provider.e_sqlite3.dll
+C:\Users\dhood\OneDrive - Federal Bureau of Investigation\Documents\Code\BlazorCRUD\Server\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\dhood\OneDrive - Federal Bureau of Investigation\Documents\Code\BlazorCRUD\Server\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\dhood\OneDrive - Federal Bureau of Investigation\Documents\Code\BlazorCRUD\Server\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 C:\Users\dhood\OneDrive - Federal Bureau of Investigation\Documents\Code\BlazorCRUD\Server\bin\Debug\net6.0\System.IO.Pipelines.dll
 C:\Users\dhood\OneDrive - Federal Bureau of Investigation\Documents\Code\BlazorCRUD\Server\bin\Debug\net6.0\runtimes\alpine-x64\native\libe_sqlite3.so
 C:\Users\dhood\OneDrive - Federal Bureau of Investigation\Documents\Code\BlazorCRUD\Server\bin\Debug\net6.0\runtimes\linux-arm\native\libe_sqlite3.so
@@ -58,6 +64,7 @@ C:\Users\dhood\OneDrive - Federal Bureau of Investigation\Documents\Code\BlazorC
 C:\Users\dhood\OneDrive - Federal Bureau of Investigation\Documents\Code\BlazorCRUD\Server\obj\Debug\net6.0\BlazorCRUD.Server.AssemblyInfoInputs.cache
 C:\Users\dhood\OneDrive - Federal Bureau of Investigation\Documents\Code\BlazorCRUD\Server\obj\Debug\net6.0\BlazorCRUD.Server.AssemblyInfo.cs
 C:\Users\dhood\OneDrive - Federal Bureau of Investigation\Documents\Code\BlazorCRUD\Server\obj\Debug\net6.0\BlazorCRUD.Server.csproj.CoreCompileInputs.cache
+C:\Users\dhood\OneDrive - Federal Bureau of Investigation\Documents\Code\BlazorCRUD\Server\obj\Debug\net6.0\BlazorCRUD.Server.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\dhood\OneDrive - Federal Bureau of Investigation\Documents\Code\BlazorCRUD\Server\obj\Debug\net6.0\BlazorCRUD.Server.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\dhood\OneDrive - Federal Bureau of Investigation\Documents\Code\BlazorCRUD\Server\obj\Debug\net6.0\BlazorCRUD.Server.RazorAssemblyInfo.cache
 C:\Users\dhood\OneDrive - Federal Bureau of Investigation\Documents\Code\BlazorCRUD\Server\obj\Debug\net6.0\BlazorCRUD.Server.RazorAssemblyInfo.cs
@@ -70,10 +77,3 @@ C:\Users\dhood\OneDrive - Federal Bureau of Investigation\Documents\Code\BlazorC
 C:\Users\dhood\OneDrive - Federal Bureau of Investigation\Documents\Code\BlazorCRUD\Server\obj\Debug\net6.0\BlazorCRUD.Server.pdb
 C:\Users\dhood\OneDrive - Federal Bureau of Investigation\Documents\Code\BlazorCRUD\Server\obj\Debug\net6.0\BlazorCRUD.Server.genruntimeconfig.cache
 C:\Users\dhood\OneDrive - Federal Bureau of Investigation\Documents\Code\BlazorCRUD\Server\obj\Debug\net6.0\ref\BlazorCRUD.Server.dll
-C:\Users\dhood\OneDrive - Federal Bureau of Investigation\Documents\Code\BlazorCRUD\Server\bin\Debug\net6.0\Humanizer.dll
-C:\Users\dhood\OneDrive - Federal Bureau of Investigation\Documents\Code\BlazorCRUD\Server\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
-C:\Users\dhood\OneDrive - Federal Bureau of Investigation\Documents\Code\BlazorCRUD\Server\bin\Debug\net6.0\Microsoft.OpenApi.dll
-C:\Users\dhood\OneDrive - Federal Bureau of Investigation\Documents\Code\BlazorCRUD\Server\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
-C:\Users\dhood\OneDrive - Federal Bureau of Investigation\Documents\Code\BlazorCRUD\Server\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
-C:\Users\dhood\OneDrive - Federal Bureau of Investigation\Documents\Code\BlazorCRUD\Server\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
-C:\Users\dhood\OneDrive - Federal Bureau of Investigation\Documents\Code\BlazorCRUD\Server\obj\Debug\net6.0\BlazorCRUD.Server.MvcApplicationPartsAssemblyInfo.cs

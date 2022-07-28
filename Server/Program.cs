@@ -18,6 +18,7 @@ builder.Services.AddDbContext<ProductDbContext> (opts => opts.UseSqlite("Data So
 //attempting to share database Product.db with both Movie and Products
 builder.Services.AddDbContext<MovieContext> (opts => opts.UseSqlite("Data Source = Product.db"));
 // builder.Services.AddScoped<ProductServices>();
+builder.Services.AddDbContext<ApplicationDBContext> (opts => opts.UseSqlite("Data Source = Product.db"));
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddControllersWithViews();
