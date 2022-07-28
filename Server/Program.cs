@@ -16,6 +16,7 @@ builder.Services.AddDbContext<ProductDbContext> (opts => opts.UseSqlite("Data So
 //attempting to share database Product.db with both Movie and Products
 builder.Services.AddDbContext<MovieContext> (opts => opts.UseSqlite("Data Source = Product.db"));
 // builder.Services.AddScoped<ProductServices>();
+builder.Services.AddSwaggerGen();
 
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
@@ -45,5 +46,10 @@ app.UseRouting();
 app.MapRazorPages();
 app.MapControllers();
 app.MapFallbackToFile("index.html");
+app.UseSwagger();
+app.UseSwaggerUI(c =>
+{
+    c.SwaggerEndpoint("/swagger/v1/swagger.json", "Blazor API V1");
+});
 
 app.Run();

@@ -72,3 +72,8 @@ C:\Users\dhood\OneDrive - Federal Bureau of Investigation\Documents\Code\BlazorC
 C:\Users\dhood\OneDrive - Federal Bureau of Investigation\Documents\Code\BlazorCRUD\Server\obj\Debug\net6.0\ref\BlazorCRUD.Server.dll
 C:\Users\dhood\OneDrive - Federal Bureau of Investigation\Documents\Code\BlazorCRUD\Server\bin\Debug\net6.0\Humanizer.dll
 C:\Users\dhood\OneDrive - Federal Bureau of Investigation\Documents\Code\BlazorCRUD\Server\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\dhood\OneDrive - Federal Bureau of Investigation\Documents\Code\BlazorCRUD\Server\bin\Debug\net6.0\Microsoft.OpenApi.dll
+C:\Users\dhood\OneDrive - Federal Bureau of Investigation\Documents\Code\BlazorCRUD\Server\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\dhood\OneDrive - Federal Bureau of Investigation\Documents\Code\BlazorCRUD\Server\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\dhood\OneDrive - Federal Bureau of Investigation\Documents\Code\BlazorCRUD\Server\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\dhood\OneDrive - Federal Bureau of Investigation\Documents\Code\BlazorCRUD\Server\obj\Debug\net6.0\BlazorCRUD.Server.MvcApplicationPartsAssemblyInfo.cs
