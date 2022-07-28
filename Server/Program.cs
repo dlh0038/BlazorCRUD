@@ -7,9 +7,11 @@ using BlazorCRUD.Server.Services;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+//trying to use same database for all entities
 builder.Services.AddDbContext<DatabaseContext>
     (options =>
-    options.UseSqlite("Data Source = User.db"));
+    //options.UseSqlite("Data Source = User.db"));
+    options.UseSqlite("Data Source = Product.db"));
 builder.Services.AddTransient<IUser, UserManager>();
 
 builder.Services.AddDbContext<ProductDbContext> (opts => opts.UseSqlite("Data Source = Product.db"));
