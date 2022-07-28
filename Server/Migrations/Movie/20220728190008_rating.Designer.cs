@@ -3,6 +3,7 @@ using System;
 using BlazorCRUD.Server.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BlazorCRUD.Server.Migrations.Movie
 {
     [DbContext(typeof(MovieContext))]
-    partial class MovieContextModelSnapshot : ModelSnapshot
+    [Migration("20220728190008_rating")]
+    partial class rating
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "6.0.7");
@@ -37,10 +39,6 @@ namespace BlazorCRUD.Server.Migrations.Movie
                     b.Property<DateTime>("ReleaseDate")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("Synopsis")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
                     b.Property<string>("Title")
                         .IsRequired()
                         .HasColumnType("TEXT");
@@ -57,7 +55,6 @@ namespace BlazorCRUD.Server.Migrations.Movie
                             Price = 7.99m,
                             Rating = "",
                             ReleaseDate = new DateTime(1989, 2, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Synopsis = "",
                             Title = "When Harry Met Sally"
                         },
                         new
@@ -67,7 +64,6 @@ namespace BlazorCRUD.Server.Migrations.Movie
                             Price = 8.99m,
                             Rating = "",
                             ReleaseDate = new DateTime(1984, 3, 13, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Synopsis = "",
                             Title = "Ghostbusters "
                         },
                         new
@@ -77,7 +73,6 @@ namespace BlazorCRUD.Server.Migrations.Movie
                             Price = 9.99m,
                             Rating = "",
                             ReleaseDate = new DateTime(1986, 2, 23, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Synopsis = "",
                             Title = "Ghostbusters 2"
                         },
                         new
@@ -87,7 +82,6 @@ namespace BlazorCRUD.Server.Migrations.Movie
                             Price = 3.99m,
                             Rating = "",
                             ReleaseDate = new DateTime(1959, 4, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Synopsis = "",
                             Title = "Rio Bravo"
                         });
                 });
