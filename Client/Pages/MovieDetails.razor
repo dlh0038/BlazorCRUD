@@ -1,0 +1,52 @@
+@page "/movies"
+@using BlazorCRUD.Shared.Models
+@inject HttpClient service
+@inject IJSRuntime js
+
+<h1>Movies</h1>
+<div class="container">
+
+    <div class="row bg-light">
+        <table class="table table-bordered">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Movie Id</th>
+                    <th>Name</th>
+                    <th>Date</th>
+                    <th>Genre</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Movies.Any())
+                {
+                    @foreach (var movie in Movies)
+                    {
+                        <tr>
+                            <td>@movie.ID</td>
+                            <td>@movie.Title</td>
+                            <td>@movie.ReleaseDate.ToShortDateString()</td>
+                            <td>@movie.Genre</td>
+                            <td>@movie.Price</td>
+                        </tr>
+                    }
+                }
+                else
+                {
+                    <tr><td colspan="6"><strong>No movies available :(</strong></td></tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+@code {
+
+    List<Movie> Movies = new List<Movie>();
+    protected override async Task OnInitializedAsync()
+    {
+        //await RefreshProducts();
+        Movies = await service.GetFromJsonAsync<List<Movie>>("api/movie");
+    } 
+}
