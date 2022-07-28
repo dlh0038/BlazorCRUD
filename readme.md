@@ -1,5 +1,5 @@
 # CRUD Operations Using Blazor, .Net 6.0, Entity Framework Core
-
+This is a combination of several Blazor EntityFramework tutorials.
 ### Resources
 https://www.c-sharpcorner.com/article/crud-operations-using-blazor-net-6-0-entity-framework-core/
 https://codewithmukesh.com/blog/blazor-crud-with-entity-framework-core/
@@ -7,15 +7,17 @@ https://docs.microsoft.com/en-us/aspnet/core/tutorials/razor-pages/model?view=as
 https://executecommands.com/crud-in-blazor-using-sqlite-entity-framework/
 
 ### Users
-![screenshot](/CaptureUsers.PNG)
+![screenshot](/Screenshots/CaptureUsers.PNG)
 ### Products
-![screenshot](/CaptureProducts.PNG)
+![screenshot](/Screenshots/CaptureProducts.PNG)
 ### Developers
-![screenshot](/CaptureDevelopers.PNG)
+![screenshot](/Screenshots/CaptureDevelopers.PNG)
 ### Movies
-![screenshot](/CaptureMovies.PNG)
+![screenshot](/Screenshots/CaptureMovies.PNG)
 ### SwaggerUI
-![screenshot](/CaptureSwagger.PNG)
+![screenshot](/Screenshots/CaptureSwagger.PNG)
+
+
 
 history:
   Id     Duration CommandLine
