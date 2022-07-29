@@ -15,6 +15,7 @@
                     <th>Date</th>
                     <th>Genre</th>
                     <th>Price</th>
+                    <th>Rating</th>
                 </tr>
             </thead>
             <tbody>
@@ -28,6 +29,7 @@
                             <td>@movie.ReleaseDate.ToShortDateString()</td>
                             <td>@movie.Genre</td>
                             <td>@movie.Price</td>
+                            <td>@movie.Rating</td>
                         </tr>
                     }
                 }
@@ -40,6 +42,8 @@
     </div>
 
 </div>
+
+<AddMovie/>
 
 @code {
 
