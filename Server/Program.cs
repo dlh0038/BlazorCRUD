@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.ResponseCompression;
 using BlazorCRUD.Server.Models;
 using BlazorCRUD.Server.Interfaces;
 using BlazorCRUD.Server.Services;
+using BlazorCRUD.Server.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -19,6 +20,7 @@ builder.Services.AddDbContext<ProductDbContext> (opts => opts.UseSqlite("Data So
 builder.Services.AddDbContext<MovieContext> (opts => opts.UseSqlite("Data Source = Product.db"));
 // builder.Services.AddScoped<ProductServices>();
 builder.Services.AddDbContext<ApplicationDBContext> (opts => opts.UseSqlite("Data Source = Product.db"));
+builder.Services.AddDbContext<SchoolContext> (opts => opts.UseSqlite("Data Source = CU.db"));
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddControllersWithViews();
@@ -36,6 +38,15 @@ else
     app.UseExceptionHandler("/Error");
     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
+}
+//seed database
+using (var scope = app.Services.CreateScope())
+{
+    var services = scope.ServiceProvider;
+
+    var context = services.GetRequiredService<SchoolContext>();
+    context.Database.EnsureCreated();
+    DbInitializer.Initialize(context);
 }
 
 app.UseHttpsRedirection();

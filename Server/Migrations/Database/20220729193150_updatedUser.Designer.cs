@@ -2,6 +2,7 @@
 using BlazorCRUD.Server.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -9,9 +10,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BlazorCRUD.Server.Migrations.Database
 {
     [DbContext(typeof(DatabaseContext))]
-    partial class DatabaseContextModelSnapshot : ModelSnapshot
+    [Migration("20220729193150_updatedUser")]
+    partial class updatedUser
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "6.0.7");
@@ -39,11 +41,7 @@ namespace BlazorCRUD.Server.Migrations.Database
                         .IsUnicode(false)
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("FirstName")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("LastName")
+                    b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("TEXT");
 

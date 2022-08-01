@@ -22,7 +22,7 @@ namespace BlazorCRUD.Server.Models
                 entity.Property(e => e.Username)
                     .HasMaxLength(100)
                     .IsUnicode(false);
-                entity.Property(e => e.Address)
+                entity.Property(e => e.StreetAddress)
                     .HasMaxLength(500)
                     .IsUnicode(false);
                 entity.Property(e => e.Cellnumber)
