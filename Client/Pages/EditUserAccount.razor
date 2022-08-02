@@ -1,0 +1,75 @@
+@page "/user/editaccount/{userId:int}"
+@using BlazorCRUD.Shared.Models
+@inject HttpClient Http
+@inject NavigationManager NavigationManager
+@inject IJSRuntime js
+@inject NavigationManager uriHelper
+<h2>Edit User</h2>
+<br />
+<EditForm Model="@user" OnValidSubmit="@EditUserDetails">
+    <DataAnnotationsValidator />
+    <div class="form-group">
+        <label>First Name :</label>
+        <div>
+            <InputText @bind-Value="@user.FirstName" />
+            <ValidationMessage For="@(() => user.FirstName)" />
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Last Name :</label>
+        <div>
+            <InputText @bind-Value="@user.LastName" />
+            <ValidationMessage For="@(() => user.LastName)" />
+        </div>
+    </div>
+    <div class="form-group">
+        <label>User Name :</label>
+        <div>
+            <InputText @bind-Value="@user.Username" />
+            <ValidationMessage For="@(() => user.Username)" />
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Password :</label>
+        <div>
+            <InputText @bind-Value="@user.Password" />
+            <ValidationMessage For="@(() => user.Password)" />
+        </div>
+    </div>
+    
+</EditForm>
+<div class="form-group">
+    <input type="submit" value="Submit" @onclick="(async () => await EditUserMethod(user))" class="btn btn-success" />
+    <input type="submit" value="Cancel" @onclick="(() => Cancel())" class="btn btn-warning" />
+</div>
+@code {
+    [Parameter]
+    public int userId { get; set; }
+    User user = new User();
+    protected override async Task OnInitializedAsync()
+    {
+        user = await Http.GetFromJsonAsync<User>("/api/User/" + Convert.ToInt32(userId));
+    }
+    async Task EditUserDetails()
+    {
+        await Http.PutAsJsonAsync("api/user", user);
+        //await js.InvokeVoidAsync("alert", $"Updated Successfully!");
+        uriHelper.NavigateTo("fetchuserdetails");
+
+    }
+    protected async Task RemoveUser(int userID)
+    {
+        await Http.DeleteAsync("api/User/" + userID);
+        NavigationManager.NavigateTo("/fetchuserdetails");
+    }
+    protected async Task EditUserMethod(User user)
+    {
+        await Http.PutAsJsonAsync("api/User", user);
+        NavigationManager.NavigateTo("/fetchuserdetails");
+
+    }
+    void Cancel()
+    {
+        NavigationManager.NavigateTo("/fetchuserdetails");
+    }
+}

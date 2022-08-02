@@ -21,5 +21,6 @@ namespace BlazorCRUD.Shared.Models
         public int Zip {get; set;} 
         public Int64 Cellnumber { get; set; }
         public string Emailid { get; set; } = null!;
+        public string Password { get; set; } = null!;
     }
 }
