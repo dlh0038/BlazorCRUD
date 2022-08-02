@@ -1,9 +1,12 @@
 @page "/student"
 @using BlazorCRUD.Shared.ContosoUniversityModels
+
 @inject HttpClient service
 @inject IJSRuntime js
+@inject NavigationManager NavigationManager
 
 <h1>Students</h1>
+
 <div class="container">
 
     <div class="row bg-light">
@@ -37,6 +40,10 @@
 
 </div>
 
+<div class="form-group">
+    <input type="submit" value="Back to CU homepage" @onclick="(() => Cancel())" class="btn btn-primary" />
+</div>
+
 @code {
 
     List<Student> Students = new List<Student>();
@@ -44,5 +51,9 @@
     {
         //await RefreshProducts();
         Students = await service.GetFromJsonAsync<List<Student>>("api/student");
-    } 
+    }
+    void Cancel()
+    {
+        NavigationManager.NavigateTo("/contosouniversity");
+    }
 }

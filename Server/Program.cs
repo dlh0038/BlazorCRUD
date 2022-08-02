@@ -6,7 +6,7 @@ using BlazorCRUD.Server.Services;
 using BlazorCRUD.Server.Data;
 
 var builder = WebApplication.CreateBuilder(args);
-
+Console.WriteLine("Setting up Database Context");
 // Add services to the container.
 //trying to use same database for all entities
 builder.Services.AddDbContext<DatabaseContext>
@@ -25,7 +25,7 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
-
+Console.WriteLine("building app");
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -39,6 +39,7 @@ else
     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
+Console.WriteLine("seeding database");
 //seed database
 using (var scope = app.Services.CreateScope())
 {
@@ -60,6 +61,7 @@ app.UseRouting();
 app.MapRazorPages();
 app.MapControllers();
 app.MapFallbackToFile("index.html");
+Console.WriteLine("using swagger");
 app.UseSwagger();
 app.UseSwaggerUI(c =>
 {

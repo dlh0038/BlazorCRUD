@@ -47,11 +47,11 @@ else
             {
                 <tr>
                     <td>@user.Userid</td>
-                    <td>@DateTime.Parse(user.DateAdded).ToShortDateString()</td>
-                    <td>@DateTime.Parse(user.DateAdded).ToString("hh:mm:ss tt")</td>
+                    <td>@user.DateAdded.ToShortDateString()</td>
+                    <td>@user.DateAdded.ToString("hh:mm:ss tt")</td>
                     <td>@user.FirstName @user.LastName</td>
                     <td>@user.StreetAddress, @user.City @user.State @user.Zip</td>
-                    <td>@user.Cellnumber</td>
+                    <td>@user.Cellnumber.ToString("(###) ###-####")</td>
                     <td>@user.Emailid</td>
                     <td>
                         <a href='/user/edit/@user.Userid' class="btn btn-outline-dark" role="button">

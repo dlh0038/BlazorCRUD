@@ -10,9 +10,9 @@
         <table class="table table-bordered">
             <thead class="thead-dark">
                 <tr>
-                    <th>Id</th>
-                    <th>Enrollment Name</th>
-                    <th>Credits</th>
+                    <th>ID</th>
+                    <th>Course Name</th>
+                    <th>Student Name</th>
                 </tr>
             </thead>
             <tbody>
@@ -46,6 +46,6 @@
         Console.WriteLine(Enrollments);
         //await RefreshProducts();
         Enrollments = await service.GetFromJsonAsync<List<Enrollment>>("api/enrollment");
-        Console.WriteLine(Enrollments);
+        
     } 
 }

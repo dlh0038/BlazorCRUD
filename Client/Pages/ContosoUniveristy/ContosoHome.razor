@@ -1,11 +1,30 @@
 @page "/contosouniversity"
+@inject NavigationManager NavigationManager
 <h1>Contoso University</h1>
 
 <h2>Students</h2>
-<a href="student">view students</a>
-
+<div class="form-group">
+    <input type="submit" value="View Students" @onclick="@NavigateToStudents" class="btn btn-primary" />
+</div>
+<br>
 <h2>Courses</h2>
-<a href="course">view courses</a>
-
+<div class="form-group">
+    <input type="submit" value="View Courses" @onclick="@NavigateToCourses" class="btn btn-primary" />
+</div>
+<br>
 <h2>Enrollment</h2>
-<a href="enrollment">view enrollment</a>
+<div class="form-group">
+    <input type="submit" value="View Enrollments" @onclick="@NavigateToEnrollments" class="btn btn-primary" />
+</div>
+
+@code{
+    void NavigateToStudents(){
+        NavigationManager.NavigateTo("/student");
+    }
+    void NavigateToCourses(){
+        NavigationManager.NavigateTo("/course");
+    }
+    void NavigateToEnrollments(){
+        NavigationManager.NavigateTo("/enrollment");
+    }
+}

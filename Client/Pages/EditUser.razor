@@ -53,14 +53,14 @@
     <div class="form-group">
         <label>Zip :</label>
         <div>
-            <InputText @bind-Value="@user.Zip" />
+            <InputNumber @bind-Value="@user.Zip" />
             <ValidationMessage For="@(() => user.Zip)" />
         </div>
     </div>
     <div class="form-group">
         <label>Cell Phone Number :</label>
         <div>
-            <InputText @bind-Value="@user.Cellnumber" />
+            <InputNumber @bind-Value="@user.Cellnumber" />
             <ValidationMessage For="@(() => user.Cellnumber)" />
         </div>
     </div>

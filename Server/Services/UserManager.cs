@@ -51,15 +51,16 @@ namespace BlazorCRUD.Server.Services
 
             try
             {
-                randuser.DateAdded = DateTime.Now.ToString();
+                randuser.DateAdded = DateTime.Now;
                 randuser.FirstName = firstNames[rand.Next(0, firstNames.Length)];
                 randuser.LastName = lastNames[rand.Next(0, lastNames.Length)];
                 randuser.Username = randuser.FirstName[0].ToString() + randuser.LastName;
                 randuser.StreetAddress = $"{rand.Next(10,9999).ToString()} {street[rand.Next(0, street.Length)]}";
                 randuser.City = $"{city[rand.Next(0,city.Length)]}";
                 randuser.State = $"{state[rand.Next(0,state.Length)]}";
-                randuser.Zip = $"{rand.Next(10000,99999)}";
-                randuser.Cellnumber = "(" + rand.Next(100, 999).ToString() + ") " + rand.Next(100, 999).ToString() + "-" + rand.Next(1000, 9999).ToString();
+                randuser.Zip = rand.Next(10000,99999);
+                randuser.Cellnumber = Convert.ToInt64(rand.Next(1,10).ToString()+string.Join("", Enumerable.Range(0,9).Select(x => rand.Next(0,10))));
+                //"(" + rand.Next(100, 999).ToString() + ") " + rand.Next(100, 999).ToString() + "-" + rand.Next(1000, 9999).ToString();
                 string[] temp = {randuser.FirstName.ToLower()+"."+randuser.LastName.ToLower(), 
                                  randuser.FirstName[0].ToString().ToLower()+randuser.LastName.ToLower()+rand.Next(1, 99).ToString(), 
                                  randuser.FirstName.ToLower()+"_"+randuser.LastName.ToLower()+rand.Next(1, 99).ToString(),
