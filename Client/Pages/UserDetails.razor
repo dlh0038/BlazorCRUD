@@ -2,7 +2,7 @@
 @using BlazorCRUD.Shared.Models
 @inject HttpClient Http
 <h1>User Data</h1>
-<p>Blazor CRUD operation</p>
+<hr />
 <div class="row">
     <div class="col-md-6">
         <a href='/user/add' class="btn btn-primary" role="button">
@@ -34,9 +34,11 @@ else
         <thead class="table-success">
             <tr>
                 <th>ID</th>
+                <th>Date Added</th>
+                <th>Time Added</th>
                 <th>Name</th>
                 <th>Address</th>
-                <th>Cell No</th>
+                <th>Cell Phone Number</th>
                 <th>E-mail</th>
             </tr>
         </thead>
@@ -45,8 +47,10 @@ else
             {
                 <tr>
                     <td>@user.Userid</td>
-                    <td>@user.Username</td>
-                    <td>@user.Address</td>
+                    <td>@DateTime.Parse(user.DateAdded).ToShortDateString()</td>
+                    <td>@DateTime.Parse(user.DateAdded).ToString("hh:mm:ss tt")</td>
+                    <td>@user.FirstName @user.LastName</td>
+                    <td>@user.StreetAddress, @user.City @user.State @user.Zip</td>
                     <td>@user.Cellnumber</td>
                     <td>@user.Emailid</td>
                     <td>
