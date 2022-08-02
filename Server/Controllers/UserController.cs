@@ -35,9 +35,11 @@ namespace BlazorCRUD.Server.Controllers
             _IUser.AddUser(user);
         }
         [HttpPost("randomadd")]
-        public void Post()
+        public string Post()
         {
-            _IUser.AddRandomUser();
+            string UserName = _IUser.AddRandomUser();
+            Console.WriteLine($"Created User: {UserName}");
+            return UserName;
         }
         [HttpPut]
         public void Put(User user)

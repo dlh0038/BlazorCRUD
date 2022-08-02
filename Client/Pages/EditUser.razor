@@ -1,12 +1,12 @@
-@page "/user/add"
-
+@page "/user/edit/{userId:int}"
 @using BlazorCRUD.Shared.Models
 @inject HttpClient Http
-
 @inject NavigationManager NavigationManager
-<h1>Add User</h1>
-<hr />
-<EditForm Model="@user" OnValidSubmit="@Cancel">
+@inject IJSRuntime js
+@inject NavigationManager uriHelper
+<h2>Edit User</h2>
+<br />
+<EditForm Model="@user" OnValidSubmit="@EditUserDetails">
     <DataAnnotationsValidator />
     <div class="form-group">
         <label>First Name :</label>
@@ -72,27 +72,37 @@
         </div>
     </div>
 </EditForm>
-    
 <div class="form-group">
-    <input type="submit" value="Submit" @onclick="(async () => await SaveUser(user))" class="btn btn-success" />
+    <input type="submit" value="Submit" @onclick="(async () => await EditUserMethod(user))" class="btn btn-success" />
     <input type="submit" value="Cancel" @onclick="(() => Cancel())" class="btn btn-warning" />
-</div>    
-    
-
+</div>
 @code {
     [Parameter]
     public int userId { get; set; }
-    protected string Title = "Add";
-    protected User user = new();
-    
-    protected async Task SaveUser(User user)
+    User user = new User();
+    protected override async Task OnInitializedAsync()
     {
-        user.DateAdded = DateTime.Now.ToString();
-        await Http.PostAsJsonAsync("api/User", user);
-        
-        Cancel();
+        user = await Http.GetFromJsonAsync<User>("/api/User/" + Convert.ToInt32(userId));
     }
-    public void Cancel()
+    async Task EditUserDetails()
+    {
+        await Http.PutAsJsonAsync("api/user", user);
+        //await js.InvokeVoidAsync("alert", $"Updated Successfully!");
+        uriHelper.NavigateTo("fetchuserdetails");
+
+    }
+    protected async Task RemoveUser(int userID)
+    {
+        await Http.DeleteAsync("api/User/" + userID);
+        NavigationManager.NavigateTo("/fetchuserdetails");
+    }
+    protected async Task EditUserMethod(User user)
+    {
+        await Http.PutAsJsonAsync("api/User", user);
+        NavigationManager.NavigateTo("/fetchuserdetails");
+
+    }
+    void Cancel()
     {
         NavigationManager.NavigateTo("/fetchuserdetails");
     }
