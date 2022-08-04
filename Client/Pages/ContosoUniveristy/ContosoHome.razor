@@ -10,12 +10,17 @@
 <h2>Courses</h2>
 <div class="form-group">
     <input type="submit" value="View Courses" @onclick="@NavigateToCourses" class="btn btn-primary" />
+    <input type="submit" value="View Students By Specific Course" @onclick="@NavigateToCoursesearch" class="btn btn-primary" />
 </div>
 <br>
 <h2>Enrollment</h2>
 <div class="form-group">
     <input type="submit" value="View Enrollments" @onclick="@NavigateToEnrollments" class="btn btn-primary" />
+    <input type="submit" value="View Enrollment By Specific Student" @onclick="@NavigateToEnrollmentsearch" class="btn btn-primary" /> 
+    
 </div>
+
+
 
 @code{
     void NavigateToStudents(){
@@ -25,6 +30,12 @@
         NavigationManager.NavigateTo("/course");
     }
     void NavigateToEnrollments(){
-        NavigationManager.NavigateTo("/enrollmentv2");
+        NavigationManager.NavigateTo("/enrollment");
+    }
+    void NavigateToEnrollmentsearch(){
+        NavigationManager.NavigateTo("/enrollmentstudentsearch");
+    }
+    void NavigateToCoursesearch(){
+        NavigationManager.NavigateTo("/courseenrollment");
     }
 }

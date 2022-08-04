@@ -28,10 +28,10 @@ namespace BlazorCRUD.Server.Controllers
         public async Task<IActionResult> Get(int? id)
         {
             var student = await _context.Students
-        .Include(s => s.Enrollments)
-            .ThenInclude(e => e.Course)
-        .AsNoTracking()
-        .FirstOrDefaultAsync(m => m.ID == id);
+                // .Include(s => s.Enrollments)
+            // .ThenInclude(e => e.Course)
+            // .AsNoTracking()
+            .FirstOrDefaultAsync(m => m.ID == id);
         if(student == null)
         {
             return NotFound();

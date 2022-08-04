@@ -1,0 +1,51 @@
+@page "/addstudent"
+@using BlazorCRUD.Shared.ContosoUniversityModels
+
+@inject HttpClient service
+@inject IJSRuntime js
+@inject NavigationManager NavigationManager
+
+<h1>Add New Students</h1>
+
+<div class="container">
+
+    <div class="row bg-light">
+    <div>
+        First Name: <input type="text" @bind="@newStudent.FirstMidName" />
+    <div>
+    </div>
+        Last Name: <input type="text" @bind="@newStudent.LastName" />
+    </div>
+    <div>
+        Enrollment Date: <input type="date" @bind="@newStudent.EnrollmentDate" />
+    </div>
+
+</div>
+</div>
+
+<div class="form-group">
+    <input type="submit" value="Submit" @onclick="(() => PostStudent(newStudent))" class="btn btn-success" />
+    <input type="submit" value="Cancel" @onclick="(() => Cancel())" class="btn btn-danger" />
+</div>
+
+@code {
+    Student newStudent = new Student();
+
+    List<Student> Students = new List<Student>();
+    protected override async Task OnInitializedAsync()
+    {
+        //await RefreshProducts();
+        Students = await service.GetFromJsonAsync<List<Student>>("api/student");
+    }
+    void PostStudent(Student student)
+    {
+        student.Enrollments = null;
+        
+        Console.WriteLine($"Posting student {newStudent.FirstMidName} {newStudent.LastName}");
+        service.PostAsJsonAsync<Student>("api/student", student);
+    }
+    void Cancel()
+    {
+        NavigationManager.NavigateTo("/contosouniversity");
+    }
+}

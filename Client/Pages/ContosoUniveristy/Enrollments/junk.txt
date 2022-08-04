@@ -1,0 +1,21 @@
+@foreach (var enrollment in from stud in Students
+                                                where stud.FirstMidName.StartsWith(SearchString) || stud.LastName.StartsWith(SearchString)
+                                                join enrol in Enrollments on stud.ID equals enrol.StudentID
+                                                join course in Courses on enrol.CourseID equals course.CourseID
+                                                
+                                                select new { 
+                                                    id = enrol.EnrollmentID, 
+                                                    name = stud.FirstMidName+" "+stud.LastName, 
+                                                    courseEnrollment = course.Title,
+                                                    grade = enrol.Grade})
+                    {
+                        
+                        <tr>
+                            <td>@enrollment.id</td>
+                            <td>@enrollment.name</td>
+                            <td>@enrollment.courseEnrollment</td>
+                            <td>@enrollment.grade</td>
+                            
+                        </tr>
+                        
+                    }

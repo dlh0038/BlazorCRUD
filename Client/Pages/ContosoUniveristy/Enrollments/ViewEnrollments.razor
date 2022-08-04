@@ -1,46 +1,41 @@
-@page "/enrollmentv2"
+@page "/courseenrollment"
 @using BlazorCRUD.Shared.ContosoUniversityModels
 @inject HttpClient service
 @inject IJSRuntime js
 @inject NavigationManager NavigationManager
 
-<h1>Enrollments</h1>
+<h1>Enrollment By Specific Course</h1>
+<p>
+    Find by course name containing: <input type="text" @bind="SearchString" />
+    <button type="button" class="btn btn-primary" @onclick="(() => SearchCourses(SearchString))">Search</button>
+</p>
 <div class="container">
 
     <div class="row bg-light">
         <table class="table table-bordered">
             <thead class="thead-dark">
                 <tr>
-                    <th>ID</th>
                     <th>Student Name</th>
                     <th>Course Name</th>
                     <th>Grade</th>
                 </tr>
             </thead>
             <tbody>
-                @if (Enrollments.Any())
+                @if (SearchString != null && QResult.Any())
                 {
-                    @foreach (var enrollment in from stud in Students 
-                                                join enrol in Enrollments on stud.ID equals enrol.StudentID
-                                                join course in Courses on enrol.CourseID equals course.CourseID
-                                                select new { 
-                                                    id = enrol.EnrollmentID, 
-                                                    name = stud.FirstMidName+" "+stud.LastName, 
-                                                    courseEnrollment = course.Title,
-                                                    grade = enrol.Grade})
+                    @foreach (var qresult in QResult)
                     {
                         <tr>
-                            <td>@enrollment.id</td>
-                            <td>@enrollment.name</td>
-                            <td>@enrollment.courseEnrollment</td>
-                            <td>@enrollment.grade</td>
-                            
+                            <td>@qresult.courseEnrollmentName</td>
+                            <td>@qresult.CourseName</td>
+                            <td>@qresult.grade</td>
                         </tr>
                     }
                 }
+                
                 else
                 {
-                    <tr><td colspan="6"><strong>Enrollment data not available</strong></td></tr>
+                    <tr><td colspan="6"><strong>Search for records</strong></td></tr>
                 }
             </tbody>
         </table>
@@ -51,10 +46,14 @@
 -->
 <button type="button" class="btn btn-primary" @onclick=NavigateToAccount>Return to CU Homepage</button>
 @code {
-
+    string SearchString = null;
     List<Enrollment> Enrollments = new List<Enrollment>();
     List<Student> Students = new List<Student>();
     List<Course> Courses = new List<Course>();
+    class QueryResult{ public string CourseName{get; set;}
+                    public string courseEnrollmentName {get; set;}
+                    public Grade? grade {get; set;}}
+    List<QueryResult> QResult = new List<QueryResult>();
     protected override async Task OnInitializedAsync()
     {
         Console.WriteLine(Enrollments);
@@ -62,15 +61,19 @@
         Enrollments = await service.GetFromJsonAsync<List<Enrollment>>("api/enrollment");
         Students = await service.GetFromJsonAsync<List<Student>>("api/student");
         Courses = await service.GetFromJsonAsync<List<Course>>("api/course");
-
-        var query = 
-        from stud in Students 
-        join enrol in Enrollments on stud.ID equals enrol.StudentID
-        join course in Courses on enrol.CourseID equals course.CourseID
-        select new { name = stud.FirstMidName+" "+stud.LastName, courseEnrollment = course.Title};
-        //print query result to console to check query
-       // query.ToList().ForEach(x => Console.WriteLine(x.name+" "+x.courseEnrollment));
         
+    }
+    void SearchCourses(string coursename)
+    {
+        var query = 
+            from stud in Students 
+            join enrol in Enrollments on stud.ID equals enrol.StudentID
+            join course in Courses on enrol.CourseID equals course.CourseID
+            where course.Title.ToLower().Contains(SearchString.ToLower())
+            select new QueryResult{ CourseName = course.Title, courseEnrollmentName = stud.FirstMidName+" "+stud.LastName};
+        QResult = query.ToList();
+        Console.WriteLine("listing courses");
+        QResult.ForEach(x => Console.WriteLine(x.CourseName));
     } 
     void NavigateToAccount(){
         NavigationManager.NavigateTo("/contosouniversity");
