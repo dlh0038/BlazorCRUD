@@ -325,14 +325,15 @@ femaleNames = [row[3] for row in firstnames]
 
 for i in range(10):
     randFirst = (maleNames+femaleNames)[random.randint(0, len(maleNames+femaleNames))]
-    randLast = surnames[random.randint(0, len(surnames))]
+    randLast = surnames[random.randint(0, len(surnames)-1)]
     randStNum = random.randint(100, 999)
-    randStreet = streetnames[random.randint(0, len(streetnames))]
-    randDomain = domains[random.randint(0, len(domains))]
+    randStreet = streetnames[random.randint(0, len(streetnames)-1)]
+    randDomain = domains[random.randint(0, len(domains)-1)]
     user = f'''{{
         Username: "{randFirst} {randLast}",
         Address: "{randStNum} {randStreet}",
         Cellnumber: "({random.randint(100,999)})-{random.randint(100,999)}-{random.randint(1000,9999)}",
         Emailid: "{randFirst}.{randLast}@{randDomain}"
     }}'''
-print(streetnames)
+    userdata = f"new User(\"{randFirst}\", \"{randStNum} {randStreet}\", {random.randint(1000000000,9999999999)}),"
+    print(userdata)

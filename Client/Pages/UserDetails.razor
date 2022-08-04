@@ -1,6 +1,8 @@
 @page "/fetchuserdetails"
 @using BlazorCRUD.Shared.Models
 @inject HttpClient Http
+@inject NavigationManager NavigationManager
+
 <h1>User Data</h1>
 <hr />
 <div class="row">
@@ -67,7 +69,10 @@ else
 
     </table>
 }
-<AddRandomUser />
+<div class="form-group">
+    <input type="submit" value="View Account" @onclick="NavigateToAccount" class="btn btn-success" />
+    <AddRandomUser />
+</div> 
 @code {
     protected List<User> userList = new();
     protected List<User> searchUserData = new();
@@ -103,5 +108,8 @@ else
     {
         SearchString = string.Empty;
         userList = searchUserData;
+    }
+    void NavigateToAccount(){
+        NavigationManager.NavigateTo("/fetchuseraccounts");
     }
 }

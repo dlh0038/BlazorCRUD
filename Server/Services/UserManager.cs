@@ -42,7 +42,6 @@ namespace BlazorCRUD.Server.Services
         //add a random user to the DB
         public string AddRandomUser()
         {
-            MD5 md5 = MD5.Create();
             Random rand = new Random();
             User randuser = new();
             string[] firstNames = {"James", "Robert", "John", "Michael", "David", "William", "Richard", "Joseph", "Thomas", "Charles", "Christopher", "Daniel", "Matthew", "Anthony", "Mark", "Donald", "Steven", "Paul", "Andrew", "Joshua", "Kenneth", "Kevin", "Brian", "George", "Timothy", "Ronald", "Edward", "Jason", "Jeffrey", "Ryan", "Jacob", "Gary", "Nicholas", "Eric", "Jonathan", "Stephen", "Larry", "Justin", "Scott", "Brandon", "Benjamin", "Samuel", "Gregory", "Alexander", "Frank", "Patrick", "Raymond", "Jack", "Dennis", "Jerry", "Tyler", "Aaron", "Jose", "Adam", "Nathan", "Henry", "Douglas", "Zachary", "Peter", "Kyle", "Ethan", "Walter", "Noah", "Jeremy", "Christian", "Keith", "Roger", "Terry", "Gerald", "Harold", "Sean", "Austin", "Carl", "Arthur", "Lawrence", "Dylan", "Jesse", "Jordan", "Bryan", "Billy", "Joe", "Bruce", "Gabriel", "Logan", "Albert", "Willie", "Alan", "Juan", "Wayne", "Elijah", "Randy", "Roy", "Vincent", "Ralph", "Eugene", "Russell", "Bobby", "Mason", "Philip", "Louis", "Mary", "Patricia", "Jennifer", "Linda", "Elizabeth", "Barbara", "Susan", "Jessica", "Sarah", "Karen", "Lisa", "Nancy", "Betty", "Margaret", "Sandra", "Ashley", "Kimberly", "Emily", "Donna", "Michelle", "Carol", "Amanda", "Dorothy", "Melissa", "Deborah", "Stephanie", "Rebecca", "Sharon", "Laura", "Cynthia", "Kathleen", "Amy", "Angela", "Shirley", "Anna", "Brenda", "Pamela", "Emma", "Nicole", "Helen", "Samantha", "Katherine", "Christine", "Debra", "Rachel", "Carolyn", "Janet", "Catherine", "Maria", "Heather", "Diane", "Ruth", "Julie", "Olivia", "Joyce", "Virginia", "Victoria", "Kelly", "Lauren", "Christina", "Joan", "Evelyn", "Judith", "Megan", "Andrea", "Cheryl", "Hannah", "Jacqueline", "Martha", "Gloria", "Teresa", "Ann", "Sara", "Madison", "Frances", "Kathryn", "Janice", "Jean", "Abigail", "Alice", "Julia", "Judy", "Sophia", "Grace", "Denise", "Amber", "Doris", "Marilyn", "Danielle", "Beverly", "Isabella", "Theresa", "Diana", "Natalie", "Brittany", "Charlotte", "Marie", "Kayla", "Alexis", "Lori"};
@@ -73,8 +72,8 @@ namespace BlazorCRUD.Server.Services
                                  };
 
                 randuser.Emailid = $"{temp[rand.Next(0,temp.Length)]}@{domains[rand.Next(0, domains.Length)]}.com";
-                byte[] hashArr = md5.ComputeHash(Encoding.ASCII.GetBytes("password")); //store encrypted password
-                randuser.Password = String.Join("", hashArr.ToList().Select(i => i.ToString("X2")));
+                
+                randuser.Password = HashPassword("password");
                 _dbContext.Users.Add(randuser);
                 _dbContext.SaveChanges();
                 return randuser.FirstName+" "+randuser.LastName;
@@ -83,6 +82,12 @@ namespace BlazorCRUD.Server.Services
             {
                 throw;
             }
+        }
+        public String HashPassword(String plaintext)
+        {
+            MD5 md5 = MD5.Create();
+            byte[] hashArr = md5.ComputeHash(Encoding.ASCII.GetBytes(plaintext)); //store encrypted password
+            return String.Join("", hashArr.ToList().Select(i => i.ToString("X2")));
         }
         //To Update the records of a particluar user
         public void UpdateUserDetails(User user)
