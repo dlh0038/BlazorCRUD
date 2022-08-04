@@ -9,17 +9,18 @@ var builder = WebApplication.CreateBuilder(args);
 Console.WriteLine("Setting up Database Context");
 // Add services to the container.
 //trying to use same database for all entities
-builder.Services.AddDbContext<DatabaseContext>
-    (options =>
-    //options.UseSqlite("Data Source = User.db"));
-    options.UseSqlite("Data Source = Product.db"));
+// builder.Services.AddDbContext<DatabaseContext>
+//     (options =>
+//     //options.UseSqlite("Data Source = User.db"));
+//     options.UseSqlite("Data Source = Product.db"));
 builder.Services.AddTransient<IUser, UserManager>();
 
 //builder.Services.AddDbContext<ProductDbContext> (opts => opts.UseSqlite("Data Source = Product.db"));
 //attempting to share database Product.db with both Movie and Products
 //builder.Services.AddDbContext<MovieContext> (opts => opts.UseSqlite("Data Source = Product.db"));
 // builder.Services.AddScoped<ProductServices>();
-builder.Services.AddDbContext<ApplicationDBContext> (opts => opts.UseSqlite("Data Source = Product.db"));
+//builder.Services.AddDbContext<ApplicationDBContext> (opts => opts.UseSqlite("Data Source = Product.db"));
+builder.Services.AddDbContext<ApplicationDBContext> (opts => opts.UseSqlServer("Server=.\\SQLEXPRESS; Database=Product.db;Trusted_Connection=True;TrustServerCertificate=True"));
 builder.Services.AddDbContext<SchoolContext> (opts => opts.UseSqlite("Data Source = CU.db"));
 builder.Services.AddSwaggerGen();
 

@@ -6,11 +6,11 @@ namespace Server.Services{
 public class ProductServices
 {
     #region Private members
-    private ProductDbContext dbContext;
+    private ApplicationDBContext dbContext;
     #endregion
 
     #region Constructor
-    public ProductServices(ProductDbContext dbContext)
+    public ProductServices(ApplicationDBContext dbContext)
     {
         this.dbContext = dbContext;
     }
@@ -23,7 +23,7 @@ public class ProductServices
     /// <returns></returns>
     public async Task<List<Product>> GetProductAsync()
     {
-        return await dbContext.Product.ToListAsync();
+        return await dbContext.Products.ToListAsync();
     }
 
     /// <summary>
@@ -35,7 +35,7 @@ public class ProductServices
     {
         try
         {
-            dbContext.Product.Add(product);
+            dbContext.Products.Add(product);
             await dbContext.SaveChangesAsync();
         }
         catch (Exception)
@@ -54,7 +54,7 @@ public class ProductServices
     {
         try
         {
-            var productExist = dbContext.Product.FirstOrDefault(p => p.Id == product.Id);
+            var productExist = dbContext.Products.FirstOrDefault(p => p.Id == product.Id);
             if (productExist != null)
             {
                 dbContext.Update(product);
@@ -77,7 +77,7 @@ public class ProductServices
     {
         try
         {
-            dbContext.Product.Remove(product);
+            dbContext.Products.Remove(product);
             await dbContext.SaveChangesAsync();
         }
         catch (Exception)

@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace BlazorCRUD.Server.Migrations.Database
 {
-    [DbContext(typeof(DatabaseContext))]
+    [DbContext(typeof(ApplicationDBContext))]
     partial class DatabaseContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)

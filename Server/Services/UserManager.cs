@@ -9,8 +9,8 @@ namespace BlazorCRUD.Server.Services
 {
     public class UserManager : IUser
     {
-        readonly DatabaseContext _dbContext = new();
-        public UserManager(DatabaseContext dbContext)
+        readonly ApplicationDBContext _dbContext = new();
+        public UserManager(ApplicationDBContext dbContext)
         {
             _dbContext = dbContext;
         }

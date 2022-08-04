@@ -20,7 +20,6 @@ namespace BlazorCRUD.Server.Data
             {
                 new Movie
                 {
-                    ID = 1,
                     Title = "When Harry Met Sally",
                     ReleaseDate = DateTime.Parse("1989-2-12"),
                     Genre = "Romantic Comedy",
@@ -29,7 +28,6 @@ namespace BlazorCRUD.Server.Data
 
                 new Movie
                 {
-                    ID = 2,
                     Title = "Ghostbusters ",
                     ReleaseDate = DateTime.Parse("1984-3-13"),
                     Genre = "Comedy",
@@ -38,7 +36,6 @@ namespace BlazorCRUD.Server.Data
 
                 new Movie
                 {
-                    ID = 3,
                     Title = "Ghostbusters 2",
                     ReleaseDate = DateTime.Parse("1986-2-23"),
                     Genre = "Comedy",
@@ -47,11 +44,17 @@ namespace BlazorCRUD.Server.Data
 
                 new Movie
                 {
-                    ID = 4,
                     Title = "Rio Bravo",
                     ReleaseDate = DateTime.Parse("1959-4-15"),
                     Genre = "Western",
                     Price = 3.99M
+                },
+                new Movie
+                {
+                    Title = "Pulp Fiction",
+                    ReleaseDate = DateTime.Parse("1994-10-14"),
+                    Genre = "Action",
+                    Price = 11.99M
                 }
             };
             
