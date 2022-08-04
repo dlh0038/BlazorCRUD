@@ -9,5 +9,7 @@ public class ApplicationDBContext : DbContext
         {
         }
         public DbSet<Developer> Developers { get; set; }
+        public DbSet<Movie> Movies { get; set; }
+        public DbSet<Product> Products { get; set; }
     }
 }

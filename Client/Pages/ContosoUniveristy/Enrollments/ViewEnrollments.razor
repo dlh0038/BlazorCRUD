@@ -1,14 +1,11 @@
-@page "/courseenrollment"
+@page "/enrollment"
 @using BlazorCRUD.Shared.ContosoUniversityModels
 @inject HttpClient service
 @inject IJSRuntime js
 @inject NavigationManager NavigationManager
 
-<h1>Enrollment By Specific Course</h1>
-<p>
-    Find by course name containing: <input type="text" @bind="SearchString" />
-    <button type="button" class="btn btn-primary" @onclick="(() => SearchCourses(SearchString))">Search</button>
-</p>
+<h1>Enrollment</h1>
+
 <div class="container">
 
     <div class="row bg-light">
@@ -21,7 +18,7 @@
                 </tr>
             </thead>
             <tbody>
-                @if (SearchString != null && QResult.Any())
+                @if (QResult.Any())
                 {
                     @foreach (var qresult in QResult)
                     {
@@ -61,9 +58,16 @@
         Enrollments = await service.GetFromJsonAsync<List<Enrollment>>("api/enrollment");
         Students = await service.GetFromJsonAsync<List<Student>>("api/student");
         Courses = await service.GetFromJsonAsync<List<Course>>("api/course");
-        
+        var query = 
+            from stud in Students 
+            join enrol in Enrollments on stud.ID equals enrol.StudentID
+            join course in Courses on enrol.CourseID equals course.CourseID
+            select new QueryResult{ CourseName = course.Title, 
+                                    courseEnrollmentName = stud.FirstMidName+" "+stud.LastName,
+                                    grade = enrol.Grade};
+        QResult = query.ToList();
     }
-    void SearchCourses(string coursename)
+    @* void SearchCourses(string coursename)
     {
         var query = 
             from stud in Students 
@@ -74,7 +78,7 @@
         QResult = query.ToList();
         Console.WriteLine("listing courses");
         QResult.ForEach(x => Console.WriteLine(x.CourseName));
-    } 
+    }  *@
     void NavigateToAccount(){
         NavigationManager.NavigateTo("/contosouniversity");
     }

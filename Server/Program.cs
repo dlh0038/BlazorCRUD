@@ -15,9 +15,9 @@ builder.Services.AddDbContext<DatabaseContext>
     options.UseSqlite("Data Source = Product.db"));
 builder.Services.AddTransient<IUser, UserManager>();
 
-builder.Services.AddDbContext<ProductDbContext> (opts => opts.UseSqlite("Data Source = Product.db"));
+//builder.Services.AddDbContext<ProductDbContext> (opts => opts.UseSqlite("Data Source = Product.db"));
 //attempting to share database Product.db with both Movie and Products
-builder.Services.AddDbContext<MovieContext> (opts => opts.UseSqlite("Data Source = Product.db"));
+//builder.Services.AddDbContext<MovieContext> (opts => opts.UseSqlite("Data Source = Product.db"));
 // builder.Services.AddScoped<ProductServices>();
 builder.Services.AddDbContext<ApplicationDBContext> (opts => opts.UseSqlite("Data Source = Product.db"));
 builder.Services.AddDbContext<SchoolContext> (opts => opts.UseSqlite("Data Source = CU.db"));
@@ -44,10 +44,19 @@ Console.WriteLine("seeding database");
 using (var scope = app.Services.CreateScope())
 {
     var services = scope.ServiceProvider;
-
+    //Contoso University
     var context = services.GetRequiredService<SchoolContext>();
     context.Database.EnsureCreated();
     DbInitializer.Initialize(context);
+    //Movies
+    var movieContext = services.GetRequiredService<ApplicationDBContext>();
+    movieContext.Database.EnsureCreated();
+    MovieDBInitializer.Initialize(movieContext);
+    //Products
+    var ProductDbContext = services.GetRequiredService<ApplicationDBContext>();
+    ProductDbContext.Database.EnsureCreated();
+    ProductDBInitializer.Initialize(ProductDbContext);
+
 }
 
 app.UseHttpsRedirection();

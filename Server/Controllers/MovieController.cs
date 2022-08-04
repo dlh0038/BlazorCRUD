@@ -10,8 +10,8 @@ namespace BlazorCRUD.Server.Controllers
     [ApiController]
     public class MovieController : ControllerBase
     {
-        private MovieContext _movieContext;
-        public MovieController(MovieContext movieContext)
+        private ApplicationDBContext _movieContext;
+        public MovieController(ApplicationDBContext movieContext)
         {
             _movieContext =movieContext;
         }

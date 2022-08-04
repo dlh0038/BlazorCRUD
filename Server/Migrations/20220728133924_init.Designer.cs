@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace BlazorCRUD.Server.Migrations
 {
-    [DbContext(typeof(ProductDbContext))]
+    [DbContext(typeof(ApplicationDBContext))]
     [Migration("20220728133924_init")]
     partial class init
     {

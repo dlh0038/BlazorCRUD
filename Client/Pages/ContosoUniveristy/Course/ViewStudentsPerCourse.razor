@@ -1,10 +1,10 @@
-@page "/enrollmentstudentsearch"
+@page "/courseenrollment"
 @using BlazorCRUD.Shared.ContosoUniversityModels
 @inject HttpClient service
 @inject IJSRuntime js
 @inject NavigationManager NavigationManager
 
-<h1>Enrollments</h1>
+<h1>Courses</h1>
 <p>
             Find by name containing: <input type="text" @bind="SearchString" />
             <button type="button" class="btn btn-primary" @onclick="(() => SearchNames(SearchString))">Search</button>
@@ -16,9 +16,10 @@
         <table class="table table-bordered">
             <thead class="thead-dark">
                 <tr>
-                    <th>Student Name</th>
+                    
                     <th>Course Name</th>
-                    <th>Grade</th>
+                    <th>Student Name</th>
+                    
                 </tr>
             </thead>
             <tbody>
@@ -27,9 +28,9 @@
                     @foreach (var qresult in QResult)
                     {
                         <tr>
-                            <td>@qresult.name</td>
-                            <td>@qresult.courseEnrollment</td>
-                            <td>@qresult.grade</td>
+                            <td>@qresult.CourseName</td>
+                            <td>@qresult.StudentName</td>
+                            
                         </tr>
                     }
                 }
@@ -50,8 +51,8 @@
     List<Enrollment> Enrollments = new List<Enrollment>();
     List<Student> Students = new List<Student>();
     List<Course> Courses = new List<Course>();
-    class QueryResult{ public string name{get; set;}
-                       public string courseEnrollment {get; set;}
+    class QueryResult{ public string CourseName{get; set;}
+                       public string StudentName {get; set;}
                        public Grade? grade {get; set;}}
     List<QueryResult> QResult = new List<QueryResult>();
     protected override async Task OnInitializedAsync()
@@ -65,20 +66,16 @@
        // query.ToList().ForEach(x => Console.WriteLine(x.name+" "+x.courseEnrollment));
         
     } 
-    void PopulateSearch()
-    {
-
-    }
     void SearchNames(String SearchName)
     {
         var query =
-        from stud in Students 
-        where stud.FirstMidName.ToLower().Contains(SearchString.ToLower()) || stud.LastName.ToLower().Contains(SearchString.ToLower())
-        join enrol in Enrollments on stud.ID equals enrol.StudentID
-        join course in Courses on enrol.CourseID equals course.CourseID
-        select new QueryResult{ name = stud.FirstMidName+" "+stud.LastName, 
-                                courseEnrollment = course.Title,
-                                grade = enrol.Grade};
+            from course in Courses
+            where course.Title.ToLower().Contains(SearchString)
+            join enrol in Enrollments on course.CourseID equals enrol.CourseID
+            join stud in Students on enrol.StudentID equals stud.ID
+            select new QueryResult{CourseName = course.Title,
+                                   StudentName = stud.FirstMidName 
+                                   };
         //query.ToList().ForEach(x => Console.WriteLine(x.name +" "+ x.courseEnrollment));
         //Console.WriteLine(query.GetType());
         QResult = query.ToList();

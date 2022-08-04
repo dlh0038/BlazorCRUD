@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace BlazorCRUD.Server.Migrations.Movie
 {
-    [DbContext(typeof(MovieContext))]
+    [DbContext(typeof(ApplicationDBContext))]
     [Migration("20220728192209_synopsis")]
     partial class synopsis
     {

@@ -10,8 +10,8 @@ namespace BlazorCRUD.Server.Controllers
     [ApiController]
     public class ProductController : ControllerBase
     {
-        private ProductDbContext _userContext;
-        public ProductController(ProductDbContext userContext)
+        private ApplicationDBContext _userContext;
+        public ProductController(ApplicationDBContext userContext)
         {
             _userContext =userContext;
         }
