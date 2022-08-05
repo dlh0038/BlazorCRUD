@@ -1,0 +1,25 @@
+﻿@page "/todo"
+@inject HttpClient service
+<PageTitle>Todo</PageTitle>
+
+<h1>Todo (@todos.Count(todo => !todo.IsDone))</h1>
+
+<div>
+    <table>
+        @foreach (var todo in todos)
+        {
+            <tr>
+                <td><input type="checkbox" @bind="todo.IsDone" /></td>
+                
+                <td><input @bind="todo.Title" /></td>
+                
+                <td>@todo.DateAdded</td>
+                
+            </tr>
+        }
+    </table>
+</div>
+<div>
+    <input placeholder="Something todo" @bind="TodoText"/>
+    <button @onclick="@PostTodo">Add todo</button>
+</div>

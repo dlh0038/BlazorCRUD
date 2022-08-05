@@ -21,7 +21,7 @@
         Console.WriteLine("random user button pressed");
         var x = await Http.PostAsync("api/user/randomadd", null);
         userList = await Http.GetFromJsonAsync<List<User>>("api/User");
-        
+        await OnInitializedAsync();
         //NavigationManager.NavigateTo(NavigationManager.Uri, forceLoad: true);
     }
 }

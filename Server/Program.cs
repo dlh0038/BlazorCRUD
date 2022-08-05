@@ -21,6 +21,8 @@ builder.Services.AddTransient<IUser, UserManager>();
 // builder.Services.AddScoped<ProductServices>();
 //builder.Services.AddDbContext<ApplicationDBContext> (opts => opts.UseSqlite("Data Source = Product.db"));
 builder.Services.AddDbContext<ApplicationDBContext> (opts => opts.UseSqlServer("Server=.\\SQLEXPRESS; Database=Product.db;Trusted_Connection=True;TrustServerCertificate=True"));
+//builder.Services.AddDbContext<TodoDBContext> (opts => opts.UseSqlServer("Server=.\\SQLEXPRESS; Database=Product.db;Trusted_Connection=True;TrustServerCertificate=True"));
+//builder.Services.AddDbContext<TodoDBContext> (opts => opts.UseSqlite("Data Source = todo.db"));
 builder.Services.AddDbContext<SchoolContext> (opts => opts.UseSqlite("Data Source = CU.db"));
 builder.Services.AddSwaggerGen();
 

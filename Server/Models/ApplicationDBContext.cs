@@ -15,6 +15,7 @@ public partial class ApplicationDBContext : DbContext
         public DbSet<Movie> Movies { get; set; }
         public DbSet<Product> Products { get; set; }
         public virtual DbSet<User> Users { get; set; } = null!;
+        public DbSet<TodoItem> TodoItems {get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

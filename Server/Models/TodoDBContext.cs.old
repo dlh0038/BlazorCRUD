@@ -1,0 +1,19 @@
+using BlazorCRUD.Shared.Models;
+using Microsoft.EntityFrameworkCore;
+
+namespace BlazorCRUD.Server.Models
+{
+    public class TodoDBContext : DbContext
+    {
+        public TodoDBContext()
+        {
+        }
+        public TodoDBContext(DbContextOptions<TodoDBContext> options):base(options)
+        {
+        }
+        
+        public DbSet<TodoItem> TodoItems {get; set; }
+
+        
+    }
+}
