@@ -41,6 +41,17 @@ namespace BlazorCRUD.Server.Controllers
             Console.WriteLine($"Created User: {UserName}");
             return UserName;
         }
+        [HttpPut("updatepassword")]
+        public string Put(User user, String plaintextpassword)
+        {
+            //string UserName = _IUser.AddRandomUser();
+            string hashedPassword = _IUser.HashPassword(plaintextpassword);
+            //Console.WriteLine(hashedPassword);
+            user.Password = hashedPassword;
+            _IUser.UpdateUserDetails(user);
+            Console.WriteLine($"Updated User: {user.FirstName} {user.LastName}'s password");
+            return user.FirstName;
+        }
         [HttpPut]
         public void Put(User user)
         {

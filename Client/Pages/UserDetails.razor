@@ -14,12 +14,24 @@
     </div>
     <div class="input-group col">
         <input type="text" class="form-control" placeholder="Search user by name"
-               @bind="SearchString" @bind:event="oninput" @onkeyup="FilterUser" />
-        @if (SearchString.Length > 0)
+               @bind="UserSearchString" @bind:event="oninput" @onkeyup="FilterUser" />
+        @if (UserSearchString.Length > 0)
         {
             <div class="input-group-append">
                 <button class="btn btn-danger" @onclick="ResetSearch">
-                    <i class="fas fa-times"></i>
+                    X
+                </button>
+            </div>
+        }
+    </div>
+    <div class="input-group col">
+        <input type="text" class="form-control" placeholder="Search user by Address"
+               @bind="AddressSearchString" @bind:event="oninput" @onkeyup="FilterUserAddress" />
+        @if (AddressSearchString.Length > 0)
+        {
+            <div class="input-group-append">
+                <button class="btn btn-danger" @onclick="ResetSearch">
+                    X
                 </button>
             </div>
         }
@@ -77,7 +89,8 @@ else
     protected List<User> userList = new();
     protected List<User> searchUserData = new();
     protected User user = new();
-    protected string SearchString { get; set; } = string.Empty;
+    protected string UserSearchString { get; set; } = string.Empty;
+    protected string AddressSearchString { get; set; } = string.Empty;
     protected override async Task OnInitializedAsync()
     {
         await GetUser();
@@ -89,10 +102,26 @@ else
     }
     protected void FilterUser()
     {
-        if (!string.IsNullOrEmpty(SearchString))
+        if (!string.IsNullOrEmpty(UserSearchString))
         {
             userList = searchUserData
-                .Where(x => x.Username.IndexOf(SearchString, StringComparison.OrdinalIgnoreCase) != -1)
+                .Where(x => x.FirstName.IndexOf(UserSearchString, StringComparison.OrdinalIgnoreCase) != -1 ||
+                        x.LastName.IndexOf(UserSearchString, StringComparison.OrdinalIgnoreCase) != -1)
+                .ToList();
+        }
+        else
+        {
+            userList = searchUserData;
+        }
+    }
+    protected void FilterUserAddress()
+    {
+        if (!string.IsNullOrEmpty(AddressSearchString))
+        {
+            userList = searchUserData
+                .Where(x => x.StreetAddress.IndexOf(AddressSearchString, StringComparison.OrdinalIgnoreCase) != -1 ||
+                            x.City.IndexOf(AddressSearchString, StringComparison.OrdinalIgnoreCase) != -1 ||
+                            x.State.IndexOf(AddressSearchString, StringComparison.OrdinalIgnoreCase) != -1)
                 .ToList();
         }
         else
@@ -106,7 +135,8 @@ else
     }
     public void ResetSearch()
     {
-        SearchString = string.Empty;
+        AddressSearchString = string.Empty;
+        UserSearchString = string.Empty;
         userList = searchUserData;
     }
     void NavigateToAccount(){
